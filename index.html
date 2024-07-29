@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: white;
+        background-size: cover;
+        background-position: cover;
+        background-repeat: no-repeat;
+        width: 300px;
+        height: 400px;
+        margin: 20px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="set">
+      <h1>color Game Rocks😂😂🤣🤣😊😊🏴‍☠️🏴‍☠️</h1>
+      <button onclick="start()">Start</button>
+      <button onclick="stop()">Stop</button>
+      <button onclick="pause()">pause</button>
+    </div>
+
+    <script>
+      const colors = ["crimson", "plum", "orange", "purple"];
+      var index = 0;
+      var result;
+      function start() {
+        result = setInterval(() => {
+          if (index == colors.length) {
+            index = 0;
+          } else {
+            document.body.style.backgroundColor = colors[index];
+            index++;
+          }
+        }, 2000);
+      }
+
+      function pause() {
+        setTimeout(() => {
+          clearInterval(result);
+        }, 0);
+      }
+      function stop() {
+        setTimeout(() => {
+          clearInterval(result);
+        }, 0);
+        index = 0;
+      }
+    </script>
+  </body>
+</html>
